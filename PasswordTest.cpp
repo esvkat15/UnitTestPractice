@@ -30,7 +30,7 @@ TEST(PasswordTest, two_leading_a)
 TEST(PasswordTest, cap_low_stuff)
 {
 	Password my_password;
-	ASSERT_EQ( 1, my_password.count_leading_characters("Aab") );
+	ASSERT_EQ( 1, my_password.count_leading_characters("AaB") );
 }
 
 TEST(PasswordTest, low_cap_stuff)
