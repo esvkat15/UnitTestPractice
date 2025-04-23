@@ -44,3 +44,15 @@ TEST(PasswordTest, empty_str)
 	Password my_password;
 	ASSERT_EQ( 0, my_password.count_leading_characters("") );
 }
+
+TEST(PasswordTest, empty_str_mixed_case)
+{
+	Password my_password;
+	ASSERT_FALSE( my_password.has_mixed_case("") );
+}
+
+TEST(PasswordTest, lower_upper)
+{
+	Password my_password;
+	ASSERT_TRUE( my_password.has_mixed_case("zA") );
+}
